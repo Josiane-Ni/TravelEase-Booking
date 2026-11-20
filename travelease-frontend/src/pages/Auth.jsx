@@ -303,6 +303,25 @@ export function AuthPage({ registerMode = false }) {
               ? "Join TravelEase and start your next journey"
               : "Login to your TravelEase account"}
           </Typography>
+          {user && (
+            <Alert
+              severity="info"
+              sx={{ mb: 2.5 }}
+              action={
+                <Button
+                  color="inherit"
+                  size="small"
+                  component={Link}
+                  to={`/${user.role}/dashboard`}
+                  sx={{ fontWeight: 700 }}
+                >
+                  Go to Dashboard
+                </Button>
+              }
+            >
+              Signed in as <strong>{user.name || user.email}</strong>
+            </Alert>
+          )}
           {error && (
             <Alert severity="error" sx={{ mb: 2 }}>
               {error}

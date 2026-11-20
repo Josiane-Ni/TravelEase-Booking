@@ -148,24 +148,23 @@ export function PublicLayout() {
               About
             </Button>
             <ThemeToggle />
-            {user ? (
+            <Stack direction="row" spacing={1} alignItems="center">
+              <Button component={Link} to="/login">
+                Sign In
+              </Button>
               <Button
                 variant="contained"
                 component={Link}
-                to={`/${user.role}/dashboard`}
+                to="/register"
+                sx={{
+                  background: "linear-gradient(100deg,#0878eb,#4840ce)",
+                  fontWeight: 700,
+                  px: 2.2,
+                }}
               >
-                Dashboard
+                Sign Up
               </Button>
-            ) : (
-              <Stack direction="row" spacing={1} alignItems="center">
-                <Button component={Link} to="/login">
-                  Sign in
-                </Button>
-                <Button variant="contained" component={Link} to="/register">
-                  Register
-                </Button>
-              </Stack>
-            )}
+            </Stack>
           </Stack>
         </Stack>
       </Box>
