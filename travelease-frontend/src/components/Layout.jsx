@@ -95,6 +95,7 @@ const admin = [
   ["Hotels", "/admin/hotels", Hotel],
   ["Holiday Packages", "/admin/packages", Luggage],
   ["Promotions", "/admin/promotions", LocalOffer],
+  ["Users & Roles", "/admin/users", People],
   ["Fraud Detection", "/admin/fraud", VerifiedUser],
   ["Reports & Analytics", "/admin/reports", BarChart],
   ["Audit Logs", "/admin/audit", History],
