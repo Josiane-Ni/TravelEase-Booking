@@ -1,0 +1,15 @@
+.runtime/
+**/node_modules/
+**/vendor/
+**/dist/
+**/.env
+**/.env.*
+!**/.env.example
+**/.idea/
+**/.vscode/
+**/.agents/
+**/.aws/
+**/.codex/
+*.log
+Thumbs.db
+.DS_Store

@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: #0866d8;
+}
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  max-width: 100%;
+}
+html {
+  overflow-x: hidden;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ff9f43;
+  outline-offset: 3px;
+}
+@media print {
+  nav,
+  header,
+  .MuiAppBar-root,
+  .no-print,
+  .MuiDrawer-root,
+  button {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  .MuiCard-root {
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+  main {
+    padding: 0 !important;
+  }
+}

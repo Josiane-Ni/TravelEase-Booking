@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class LoyaltyTransaction extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['loyalty_account_id', 'booking_id', 'type', 'points'];
+
+    protected function casts(): array
+    {
+        return [];
+    }
+}
