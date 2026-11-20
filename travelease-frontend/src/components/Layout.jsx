@@ -149,22 +149,13 @@ export function PublicLayout() {
             </Button>
             <ThemeToggle />
             {user ? (
-              <Stack direction="row" spacing={1} alignItems="center">
-                <Chip
-                  size="small"
-                  label={`${user.role?.toUpperCase()}: ${user.name?.split(" ")[0] || user.email?.split("@")[0]}`}
-                  color={user.role === "admin" ? "secondary" : "default"}
-                  variant="outlined"
-                  sx={{ fontWeight: 600, display: { xs: "none", sm: "inline-flex" } }}
-                />
-                <Button
-                  variant="contained"
-                  component={Link}
-                  to={`/${user.role}/dashboard`}
-                >
-                  Dashboard
-                </Button>
-              </Stack>
+              <Button
+                variant="contained"
+                component={Link}
+                to={`/${user.role}/dashboard`}
+              >
+                Dashboard
+              </Button>
             ) : (
               <Stack direction="row" spacing={1} alignItems="center">
                 <Button component={Link} to="/login">
